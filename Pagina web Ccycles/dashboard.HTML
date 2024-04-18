@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ccycles | Servicio Técnico</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css'>
+
+    <style>
+        .card-img-top {
+            margin-bottom: 8px;
+        }
+    </style>
+    
+    <style>
+        .navbar-nav .nav-link {
+            color: white; /* Establece el color del texto en blanco */
+        }
+
+        .navbar {
+            padding-top: 5px; /* Espacio superior para que la imagen del logo sea más grande */
+            padding-bottom: 1px; /* Espacio inferior para que la imagen del logo sea más grande */
+        }
+
+        .navbar-brand img {
+            height: 40px; /* Tamaño de la imagen del logo */
+        }
+
+        .navbar-toggler {
+            margin-top: 20px; /* Ajuste de posición para el botón del navbar-toggler */
+        }
+
+        .navbar-brand {
+            margin-left: 60px; /* Mueve la imagen del logo hacia la derecha */
+        }
+    </style>
+    <style>
+        #scrollToTopBtn {
+            display: none; /* Oculta el botón por defecto */
+            position: fixed; /* Fija el botón en la ventana del navegador */
+            bottom: 20px; /* Alinea el botón en la esquina inferior derecha */
+            right: 20px;
+            z-index: 99; /* Asegura que el botón esté encima de otros elementos */
+            border: none; /* Elimina el borde del botón */
+            outline: none; /* Elimina el contorno del botón al hacer clic */
+            background-color: #535353; /* Color de fondo del botón */
+            color: white; /* Color del icono */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            padding: 15px; /* Espaciado interno del botón */
+            border-radius: 50%; /* Hace que el botón sea redondeado */
+        }
+    
+        #scrollToTopBtn:hover {
+            background-color: #636363; /* Cambia el color de fondo al pasar el cursor */
+        }
+    </style>
+    
+    <script>
+        // Muestra u oculta el botón dependiendo del desplazamiento de la página
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+    
+        // Hace que la página se desplace suavemente hacia arriba cuando se hace clic en el botón
+        function topFunction() {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <a class="navbar-brand" href="./INDEX.HTML">
+            <img src="./img/logo.png" alt="Logo de Cycles Workshop">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./INDEX.HTML">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Servicios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Mantención Mecánica</a>
+                        <a class="dropdown-item" href="#">Mantención de Suspensiones</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Otros Servicios</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./NOSOTROS.HTML">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./CONTACTO.HTML">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./SERVICIOS.HTML" style="color: rgb(163, 0, 0);">AGENDAR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./INICIO_SESION.HTML">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./CARRITO.HTML">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Panel de Administrador</h2>
+            </div>
+
+            <!-- Sección de gestión de pedidos -->
+        
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ganancias Mensuales</h5>
+                        <canvas id="monthlyEarningsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ganancias Anuales</h5>
+                        <canvas id="yearlyEarningsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="container admin-content mt-4">
+                <h3 class="text-center">Ultimos servicios de Usuarios</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Fecha agenda</th>
+                                <th scope="col">Servicio</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Juan Pérez</td>
+                                <td>16/04/2024 - 10:00</td>
+                                <td>Full Service - $80.000 </td>
+                                <td>
+                                    
+                                    <button type="button" class="btn btn-danger btn-sm">Eliminar Servicio</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>María López</td>
+                                <td>18/04/2024 - 12:00</td>
+                                <td>Purgado Frenos - $40.000 </td>
+                                <td>
+                                    
+                                    <button type="button" class="btn btn-danger btn-sm">Eliminar Servicio</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+      
+            <div class="col-md-12 mt-4">
+                <h3 class="text-center">Usuarios de Administrador</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Correo Electrónico</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Juan Pérez</td>
+                            <td>juan@example.com</td>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jose Pérez</td>
+                            <td>jose@example.com</td>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
+                        <!-- Agregar más filas según sea necesario -->
+                    </tbody>
+                </table>
+                <div class="text-center"> <!-- Aquí se centra el botón -->
+                    <button class="btn btn-primary mt-3">Agregar Nuevo Usuario</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Data for the charts
+        const monthlyEarningsData = {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+            datasets: [{
+                label: 'Ganancias Mensuales',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                data: [5000, 6000, 7000, 5500, 7500, 8000], // Example data, replace with your actual data
+            }]
+        };
+
+        const yearlyEarningsData = {
+            labels: ['2023', '2024', '2025'],
+            datasets: [{
+                label: 'Ganancias Anuales',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                data: [50000, 60000, 70000], // Example data, replace with your actual data
+            }]
+        };
+
+        // Configuration for the charts
+        const chartOptions = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+
+        // Create the charts
+        const monthlyEarningsChart = new Chart(document.getElementById('monthlyEarningsChart'), {
+            type: 'bar',
+            data: monthlyEarningsData,
+            options: chartOptions
+        });
+
+        const yearlyEarningsChart = new Chart(document.getElementById('yearlyEarningsChart'), {
+            type: 'bar',
+            data: yearlyEarningsData,
+            options: chartOptions
+        });
+    </script>
+</body>
+</html>
