@@ -243,21 +243,21 @@
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Direccion de Facturacion</h4>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation was-validated" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required minlength="2">
               <div class="invalid-feedback">
-                Se requiere un nombre válido.
+                Se requiere un nombre.
               </div>
             </div>
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required minlength="2">
               <div class="invalid-feedback">
-                Se requiere un Apellido válido.
+                Se requiere un Apellido.
               </div>
             </div>
 
@@ -265,32 +265,32 @@
               <label for="username" class="form-label">Nombre de usuario</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="nombre de usuario" required>
+                <input type="text" class="form-control" id="username" placeholder="nombre de usuario" required minlength="2">
               <div class="invalid-feedback">
-                Se requiere un nombre de usuario válido.
+                Se requiere un nombre de usuario.
                 </div>
               </div>
             </div>
 
             <div class="col-12">
               <label for="email" class="form-label">Correo <span class="text-muted"></span></label>
-              <input type="email" class="form-control" id="email" placeholder="nombre@gmail.com">
+              <input type="email" class="form-control" id="email" placeholder="nombre@gmail.com" required minlength="2">
               <div class="invalid-feedback">
-                Por favor, ingrese una dirección de correo electrónico válida para recibir actualizaciones de envío.
+                Por favor, ingrese una dirección de correo electrónico para recibir actualizaciones de envío.
               </div>
             </div>
 
             <div class="col-12">
               <label for="address" class="form-label">Direccion</label>
-              <input type="text" class="form-control" id="direccion" placeholder="direccion" required>
+              <input type="text" class="form-control" id="direccion" placeholder="Direccion" required>
               <div class="invalid-feedback">
-                "Por favor, ingrese una dirección valdia."
+                Por favor, ingrese una dirección.
               </div>
             </div>
 
             <div class="col-12">
               <label for="address2" class="form-label">Direccion 2 <span class="text-muted">(Opcional)</span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Departamento o casa">
+              <input type="text" class="form-control" id="address2" placeholder="Departamento o casa" required minlength="2">
             </div>
 
             <div class="col-md-5">
@@ -315,27 +315,28 @@
                 <option>Magallanes</option>
               </select>
               <div class="invalid-feedback">
-                "Por favor,selecciona una opcion valida"
+                Por favor, selecciona una opcion.
               </div>
             </div>
 
             <div class="col-md-4">
               <label for="state" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="address2" placeholder="Ciudad">
+                <input type="text" class="form-control" id="address2" placeholder="Ciudad" required>
               </select>
               <div class="invalid-feedback">
-                "Por favor,selecciona una opcion valida"
+                Por favor,selecciona una ciudad.
               </div>
             </div>
 
             <div class="col-md-3">
-              <label for="zip" class="form-label">Codigo Postal</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <label for="zip" class="form-label">Comuna</label>
+              <input type="text" class="form-control" id="zip" placeholder="Comuna" required>
               <div class="invalid-feedback">
-                Ingrese codigo postal.
+                Ingrese comuna.
               </div>
             </div>
           </div>
+        </form>
 
           <hr class="my-4">
 
@@ -368,6 +369,8 @@
             </div>
           </div>
 
+
+          <form class="needs-validation was-validated" novalidate>
           <div class="row gy-3">
             <div class="col-md-6">
               <label for="cc-name" class="form-label">Nombre Titular</label>
@@ -406,7 +409,7 @@
           <hr class="my-4">
 
           <a href="envioentrega.html" class="btn btn-primary btn-lg btn-block w-100">Continuar</a>
-
+        </form>
         </form>
       </div>
     </div>
@@ -513,6 +516,7 @@
                     
                 </div>
 
+                
 
                 
                 <!-- Grid column -->
@@ -532,6 +536,7 @@
         </div>
     </section>
     <!-- Section: Links  -->
+
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
