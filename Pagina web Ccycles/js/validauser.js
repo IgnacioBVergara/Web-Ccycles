@@ -3,7 +3,7 @@ function validarFormulario() {
     var password = document.getElementById("password").value;
 
     // Aquí puedes implementar tu lógica de validación, por ejemplo:
-    if (username === "" || password === "") {
+    if (username.trim() === "" || password.trim() === "") {
         alert("Por favor, completa todos los campos.");
         return false; // Evita que se envíe el formulario si hay campos vacíos
     }
