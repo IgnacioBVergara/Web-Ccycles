@@ -218,7 +218,7 @@
             <h3>Iniciar Sesión:</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <form id="loginForm">
+                    <form id="loginForm" onsubmit="return validarFormulario()">
                         <div class="form-group">
                             <label for="username">Nombre de Usuario:</label>
                             <input type="text" class="form-control" id="username" placeholder="Ingrese el nombre de usuario">
@@ -234,42 +234,31 @@
                                 <label class="form-check-label" for="rememberPassword">Recordar contraseña</label>
                             </div>
                         </div>
+                        
+                        <p><a href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a></p>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                        
+                        <p> </p>
+                        
+                        <a href="dashboard.HTML" class="btn btn-primary btn-block">Iniciar Sesión ADMIN</a>
                     </form>
-                    <p><a href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a></p> <!-- Agregado: Enlace para recuperar contraseña -->
-                    <a href="panel_usuario.HTML" class="btn btn-primary btn-block">Iniciar Sesión</a>
-                    <p> </p>
-                    <a href="dashboard.HTML" class="btn btn-primary btn-block">Iniciar Sesión ADMIN</a>
-                    
-                    </form>
-                    
                 </div>
+                
                 <div class="col-md-6 d-flex justify-content-center">
                     <div class="new-user-text">
                         <h5>Eres nuevo en Ccycles?</h5>
                         <a href="./REGISTRO_USUARIO.HTML" class="btn btn-success register-button">REGISTRARSE</a>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que se envíe el formulario automáticamente
-
-            // Obtener los valores de los campos de texto
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            // Verificar si el nombre de usuario y la contraseña son correctos
-            if (username === 'wenseslao' && password === '123') {
-                // Redirigir a la página deseada
-                window.location.href = './administrador.html';
-            } else {
-                // Si las credenciales son incorrectas, mostrar un mensaje de error
-                alert('Nombre de usuario o contraseña incorrectos. Inténtalo de nuevo.');
-            }
-        });
-    </script>
+    <script src="./js/validauser.js"></script>
 </body>
+
+
+
+
+
 </html>
